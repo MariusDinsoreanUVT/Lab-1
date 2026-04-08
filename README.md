@@ -119,16 +119,6 @@ A multi-page website showcasing a professional portfolio and CV using HTML5 and 
 ## How to View
 Open `index.html` in a web browser to start browsing the site.
 
-## Next Steps (for GitHub Pages Deployment)
-1. Initialize git repository: `git init`
-2. Add all files: `git add .`
-3. Commit: `git commit -m "Initial portfolio setup"`
-4. Push to GitHub
-5. Enable GitHub Pages in repository settings
-6. Website will be available at: `https://username.github.io/repository-name/`
-
----
-
 **Author**: Marius Dinsorean  
-**Date**: 2024  
+**Date**: 2026  
 **Course**: Web Design Lab - Recontractare
