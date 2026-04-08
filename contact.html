@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out with any questions or feedback!</p>
+    </header>
+    
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="contact.html" class="active">Contact Me</a></li>
+        </ul>
+    </nav>
+    
+    <main id="main-content">
+    <section>
+        <form method="post" action="#" aria-label="Contact form">
+        <fieldset>
+            <legend>Your details</legend>
+            <label for="name">Full name (required)</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email (required)</label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+        <fieldset>
+            <legend>Your message</legend>
+            <label for="subject">Subject (required)</label>
+            <input type="text" id="subject" name="subject" required
+                aria-describedby="subject-hint">
+            <p id="subject-hint" class="form-hint">e.g. Course 2</p>
+            <label for="msg">Message (required)</label>
+            <textarea id="msg" name="message" rows="1" required></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>How did you hear about me?</legend>
+            <label for="hear-course">Course / university</label>
+            <input type="radio" id="hear-course" name="hear" value="course">
+            <label for="hear-search">Social Media</label>
+            <input type="radio" id="hear-search" name="hear" value="search">
+            <label for="hear-other">Other</label>
+            <input type="radio" id="hear-other" name="hear" value="other">
+        </fieldset>
+        <button type="submit">Send message</button>
+        </form>
+    </section>
+
+<h2>Messages Received</h2>
+    <section>
+        <table class="messages-table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Message</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Priority</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Alice</td>
+                <td><a href="mailto:alice@gmail.com">alice@gmail.com</a></td>
+                <td>Hey! Just finished Lab 1!</td>
+                <td>01.01.2026</td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td rowspan="3">Bob</td>
+                <td rowspan="3"><a href="mailto:bob@e-uvt.ro">bob@e-uvt.ro</a></td>
+                <td>Hey, how’s it going?</td>
+                <td>09.02.2026</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Do you know the deadline for Lab 3?</td>
+                <td>09.02.2026</td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Can someone share the example solution for Lab 2?</td>
+                <td>21.02.2026</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </tbody>
+        </table>
+    </section>
+    </main>
+</body>
+</html>

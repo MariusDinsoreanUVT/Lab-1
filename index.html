@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>
-            Lab
-        </title>
-    </head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Course Homepage</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="hero">
         <h1>My Course Homepage</h1>
         <p>Course resources and updates</p>
     </header>
     <nav aria-label="Main navigation">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="https://www.example.com">Course Site</a></li>
-            <li><a href="#resources">Resources</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
         </ul>
     </nav>
+
     <main id="main-content">
         <section>
             <h2>Welcome</h2>
@@ -28,15 +30,122 @@
         </section>
         <section>
             <h2>Profile Image</h2>
-                <img src="Marius.jpg" alt="My Profile Picture" width="85,3" height="128"> 
+            <img src="Marius.jpg" alt="My Profile Picture" width="85" height="128"
+                style="border: 2px solid #333; border-radius: 8px;">
         </section>
         <section>
             <h2>About Me</h2>
-            <p>My goal is to finish this course. </p>
+            <p>My first career goal is to become a security engineer.</p>
+            <table class="skills-table">
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="2">Personal Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" rowspan="3">Programming</th>
+                        <td>HTML</td>
+                        <td style="background: #d8f8e3; color: #196b2c; font-weight: 700;">JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>C/C++</td>
+                        <td>Python</td>
+                    </tr>
+                    <tr>
+                        <td style="background: #ffe8e8; color: #b20000; font-weight: 700;">Java</td>
+                        <td>SQL</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="3">Cybersecurity</th>
+                        <td colspan="2">Offensive Security</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Defensive Security</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Security Solutions</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Other</th>
+                        <td colspan="2">Git</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <section>
+            <h2>Personal Projects Portfolio</h2>
+            <table class="portfolio-table">
+                <caption>My Personal Projects</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Project Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Technologies</th>
+                        <th scope="col">Difficulty</th>
+                        <th scope="col">Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Weather App</td>
+                        <td>A web application to display weather information for any city</td>
+                        <td>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>API Integration</li>
+                            </ul>
+                        </td>
+                        <td><select>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select></td>
+                        <td><a href="https://github.com/MariusDinsoreanUVT">View Project</a></td>
+                    </tr>
+                    <tr>
+                        <td>IT Contracting System</td>
+                        <td>A web application that manages IT contracts and company's departments</td>
+                        <td>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Java</li>
+                                <li>Databases</li>
+                            </ul>
+                        </td>
+                        <td><select>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select></td>
+                        <td><a href="https://github.com/MariusDinsoreanUVT">View Project</a></td>
+                    </tr>
+                    <tr>
+                        <td>WFF Tree Project</td>
+                        <td>A project in python that solves well formed formulas</td>
+                        <td>
+                            <ul>
+                                <li>Python</li>
+                            </ul>
+                        </td>
+                        <td><select>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select></td>
+                        <td><a href="https://github.com/MariusDinsoreanUVT/WFF_Tree_Project">View Project</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     <footer>
         <p>Marius | Web Design</p>
     </footer>
 </body>
+
 </html>
