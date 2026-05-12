@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Specificity Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity Game</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Internal CSS: Specificity Exercise */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: #fff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #5c2a9d;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #5c2a9d;
+            padding-bottom: 0.5rem;
+        }
+
+        .exercise-container {
+            margin-bottom: 2rem;
+        }
+
+        .paragraph-group {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+
         p {
             color: gray;
             font-size: 1rem;
@@ -42,22 +77,76 @@
             font-style: normal;
             letter-spacing: 0.03em;
         }
+
         h1 {
             color: red;
         }
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="hero">
+        <h1>CSS Specificity Game</h1>
+        <p>Learn CSS selector specificity with interactive examples</p>
+    </header>
 
-    <p>Paragraph A</p>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="universities.html">Universities</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="card.html">Card</a></li>
+            <li><a href="specificity.html" class="active">Specificity</a></li>
+        </ul>
+    </nav>
 
-    <p class="info">Paragraph B</p>
+    <main id="main-content">
+        <section class="exercise-container">
+            <h2>Specificity Exercise - Observe Which Styles Apply</h2>
+            <p>Below are four paragraphs. Observe which CSS rules apply to each based on specificity:</p>
+            
+            <div class="paragraph-group">
+                <p><strong>Paragraph A</strong> (element selector only)</p>
+                <p>This paragraph uses only the <code>p</code> element selector.</p>
+            </div>
 
-    <p id="warning">Paragraph C</p>
+            <div class="paragraph-group">
+                <p class="info"><strong>Paragraph B</strong> (element + class selector)</p>
+                <p class="info">This paragraph uses <code>p</code> and <code>.info</code> class selector. The class selector overrides element styles.</p>
+            </div>
 
-    <p class="info" id="warning">Paragraph D</p>
+            <div class="paragraph-group">
+                <p id="warning"><strong>Paragraph C</strong> (element + ID selector)</p>
+                <p id="warning">This paragraph uses <code>p</code> and <code>#warning</code> ID selector. ID has higher specificity than class.</p>
+            </div>
 
-    <h1>title1</h1>
+            <div class="paragraph-group">
+                <p class="info" id="warning"><strong>Paragraph D</strong> (element + class + ID selectors)</p>
+                <p class="info" id="warning">This paragraph uses all selectors: <code>p</code>, <code>.info</code>, and <code>#warning</code> combined. The highest specificity (<code>#warning.info</code>) wins.</p>
+            </div>
 
+            <h1>Title with Element Selector (demonstrates internal CSS override)</h1>
+        </section>
+
+        <section>
+            <h2>Specificity Calculation</h2>
+            <p>Specificity is calculated as follows:</p>
+            <ul>
+                <li><strong>Element selector (p):</strong> Specificity = 0,0,0,1</li>
+                <li><strong>Class selector (.info):</strong> Specificity = 0,0,1,0</li>
+                <li><strong>ID selector (#warning):</strong> Specificity = 0,1,0,0</li>
+                <li><strong>Combined (#warning.info):</strong> Specificity = 0,1,1,0</li>
+            </ul>
+            <p>Higher specificity values override lower ones. When specificity is equal, the last rule in the cascade wins.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Marius Dinsorean. All rights reserved.</p>
+    </footer>
 </body>
 </html>

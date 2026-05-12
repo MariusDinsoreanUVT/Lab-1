@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universities in Romania</title>
+    <link rel="stylesheet" href="universities.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="hero">
+        <h1>Universities in Romania</h1>
+        <p>Explore Romanian universities and their websites</p>
+    </header>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="universities.html" class="active">Universities</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="card.html">Card</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <div class="container">
+            <h1>Universities in Romania</h1>
+            <label for="q">Filter (optional):</label>
+            <input id="q" placeholder="search by name…" />
+
+            <div id="status" class="status"></div>
+
+            <button id="exportCsv" class="export-btn">Export CSV</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Website</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>Marius | Web Design</p>
+    </footer>
+
+    <script src="universities.js"></script>
+</body>
+
+</html>
